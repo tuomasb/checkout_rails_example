@@ -1,0 +1,37 @@
+<%
+# Unique identifier for the payment, alphanumeric 20 characters max
+# Generate your own and store in database with the order, this demo app generates one and then discards it
+stamp = Time.now.to_i.to_s
+
+# Using payment_service_for helper from ActiveMerchant::Billing::Integrations::ActionViewHelper
+payment_service_for stamp, "375917",
+    :amount => "200", :currency => "EUR", :credential2 => "SAIPPUAKAUPPIAS",
+    :service => :checkout_finland do |service|
+
+# Reference number, language and other order details
+service.reference = "474738238"
+service.language = "FI"
+service.content = "1"
+service.delivery_date = "20140110"
+service.description = "Some items"
+
+# Customer details
+service.customer :first_name => "Tero",
+    :last_name => "Testaaja",
+    :phone => "0800 552 010",
+    :email => "support@checkout.fi"
+
+# Billing address
+service.billing_address :address1 => "Testikatu 1 A 10",
+    :city => "Helsinki",
+    :zip => "00100",
+    :country => "FIN" 
+
+# Return URLs for notification, cancellation etc.
+service.notify_url = "http://www.example.com/notify"
+service.reject_url = "http://www.example.com/reject"
+service.return_url = "http://www.example.com/return"
+service.cancel_return_url = "http://www.example.com/cancel"
+%>
+<%= submit_tag 'Make payment' %>
+<% end %>
