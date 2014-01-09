@@ -45,5 +45,5 @@ end
 gem 'debugger', group: [:development, :test]
 
 # Activemerchant
-gem 'activemerchant'
+gem 'activemerchant', :git => 'git://github.com/tuomasb/active_merchant.git', :branch => 'checkout_finland'
 
