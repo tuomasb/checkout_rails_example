@@ -62,6 +62,8 @@ class PaymentController < ApplicationController
         @status = "Payer chose delayed payment, status code: " + notify.status
       elsif notify.activation?
         @status = "Manual activation requeired, status code: " + notify.status
+      elsif notify.cancelled?
+        @status = "Payment cancelled, status code: " + notify.status
       end
     else
       @status = "MAC check failed"

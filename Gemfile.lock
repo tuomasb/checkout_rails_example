@@ -13,7 +13,7 @@ GEM
     active_utils (2.0.1)
       activesupport (>= 2.3.11)
       i18n
-    activemerchant (1.42.3)
+    activemerchant (1.42.4)
       active_utils (~> 2.0, >= 2.0.1)
       activesupport (>= 2.3.14, < 5.0.0)
       builder (>= 2.1.2, < 4.0.0)
@@ -72,7 +72,7 @@ GEM
     minitest (4.7.5)
     money (6.0.0)
       i18n (~> 0.6.4)
-    multi_json (1.8.2)
+    multi_json (1.8.4)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     polyglot (0.3.3)
