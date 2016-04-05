@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '4.2.6'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -42,8 +42,8 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+#gem 'debugger', group: [:development, :test]
 
 # Activemerchant
-gem 'activemerchant', :git => 'git://github.com/tuomasb/active_merchant.git', :branch => 'checkout_finland'
+gem 'offsite_payments', :git => 'git://github.com/tuomasb/offsite_payments.git', :branch => 'checkout_finland'
 

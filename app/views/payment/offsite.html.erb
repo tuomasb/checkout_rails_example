@@ -3,7 +3,7 @@
 # Generate your own and store in database with the order, this demo app generates one and then discards it
 stamp = Time.now.to_i.to_s
 
-# Using payment_service_for helper from ActiveMerchant::Billing::Integrations::ActionViewHelper
+# Using payment_service_for helper from OffsitePayments::Integrations::ActionViewHelper
 payment_service_for stamp, "375917",
     :amount => "200", :currency => "EUR", :credential2 => "SAIPPUAKAUPPIAS",
     :service => :checkout_finland do |service|
